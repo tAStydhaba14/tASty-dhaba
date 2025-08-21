@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tASty dhaba - Family Restaurant</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Lobster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom font for the brand */
+        .font-brand {
+            font-family: 'Lobster', cursive;
+        }
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-brand text-orange-600">tASty dhaba</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#menu" class="text-gray-600 hover:text-orange-600 transition duration-300">Menu</a>
+                <a href="#reviews" class="text-gray-600 hover:text-orange-600 transition duration-300">Reviews</a>
+                <a href="#contact" class="text-gray-600 hover:text-orange-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-orange-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#menu" class="block py-2 text-gray-600 hover:text-orange-600">Menu</a>
+            <a href="#reviews" class="block py-2 text-gray-600 hover:text-orange-600">Reviews</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-orange-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Section -->
+        <section class="relative h-96 md:h-[500px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1555992336-fb0d29498b13?q=80&w=1964&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white p-4">
+                    <h1 class="text-4xl md:text-6xl font-bold font-brand tracking-wider">Welcome to tASty dhaba</h1>
+                    <p class="mt-4 text-lg md:text-xl">Authentic Flavors, Family Traditions</p>
+                    <a href="#menu" class="mt-8 inline-block bg-orange-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-orange-700 transition duration-300">View Our Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Delicious Menu</h2>
+                <div class="overflow-x-auto shadow-lg rounded-lg">
+                    <table class="w-full text-left text-gray-700">
+                        <thead class="bg-orange-500 text-white uppercase text-sm leading-normal">
+                            <tr>
+                                <th class="py-3 px-6">Item</th>
+                                <th class="py-3 px-6">Description</th>
+                                <th class="py-3 px-6 text-right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 text-sm font-light">
+                            <!-- Category: Starters -->
+                            <tr class="bg-gray-200 font-semibold text-gray-700">
+                                <td colspan="3" class="py-3 px-6">Starters</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Paneer Tikka</td>
+                                <td class="py-3 px-6">Cottage cheese marinated in spices and grilled in a tandoor.</td>
+                                <td class="py-3 px-6 text-right">₹250</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Hara Bhara Kebab</td>
+                                <td class="py-3 px-6">Spiced patties made with spinach, peas, and potatoes.</td>
+                                <td class="py-3 px-6 text-right">₹220</td>
+                            </tr>
+                             <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Chicken 65</td>
+                                <td class="py-3 px-6">Spicy, deep-fried chicken chunks.</td>
+                                <td class="py-3 px-6 text-right">₹300</td>
+                            </tr>
+
+                            <!-- Category: Main Course -->
+                            <tr class="bg-gray-200 font-semibold text-gray-700">
+                                <td colspan="3" class="py-3 px-6">Main Course</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Butter Chicken</td>
+                                <td class="py-3 px-6">Grilled chicken simmered in a smooth, buttery & creamy tomato gravy.</td>
+                                <td class="py-3 px-6 text-right">₹450</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Dal Makhani</td>
+                                <td class="py-3 px-6">Black lentils and red kidney beans cooked in a creamy, buttery sauce.</td>
+                                <td class="py-3 px-6 text-right">₹350</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Kadai Paneer</td>
+                                <td class="py-3 px-6">Cottage cheese and bell peppers cooked in a spicy masala.</td>
+                                <td class="py-3 px-6 text-right">₹380</td>
+                            </tr>
+
+                            <!-- Category: Breads -->
+                            <tr class="bg-gray-200 font-semibold text-gray-700">
+                                <td colspan="3" class="py-3 px-6">Breads</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Tandoori Roti</td>
+                                <td class="py-3 px-6">Whole wheat bread baked in a clay oven.</td>
+                                <td class="py-3 px-6 text-right">₹40</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="py-3 px-6 font-medium">Garlic Naan</td>
+                                <td class="py-3 px-6">Soft leavened bread with garlic and butter.</td>
+                                <td class="py-3 px-6 text-right">₹70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section id="reviews" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">We Value Your Feedback!</h2>
+                    <p class="text-gray-600 mb-8">Your reviews help us grow and serve you better. Please take a moment to share your experience on Google.</p>
+                    <!-- IMPORTANT: Replace the href="#" with your actual Google Maps review link -->
+                    <a href="https://maps.app.goo.gl/VcGpENUbUzaBJLHk8" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center bg-orange-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-orange-700 transition duration-300 shadow-lg">
+                        <i class="fab fa-google mr-2"></i>
+                        Review us on Google
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-brand text-orange-500">tASty dhaba</h3>
+            <p class="mt-4">Near mini bypas Gudibanda Rd,Kodad,Telangana 508206</p>
+            <p>Phone: +91 95530 12017</p>
+            <p class="mt-8 text-sm text-gray-400">&copy; 2025 tASty dhaba. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
